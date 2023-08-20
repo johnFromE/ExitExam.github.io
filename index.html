@@ -1,0 +1,167 @@
+<html>
+<head>
+<style>
+.q_holder {
+    background: lightblue;
+    border-radius: 10px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    margin: 17px;
+}
+.choice_latters {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-right: 40px;
+}
+.answer {
+    width: 40px;
+    height: 40px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+    
+    
+#head_con {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 5px;
+}
+#promo_tab {
+    height: 700px;
+    width: 15%;
+}
+.q_list {
+    width: 70%;
+}
+#promo_tab {
+    height: 607px;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    border: solid;
+    justify-content: center;
+    border-color: gray;
+    color: gray;
+    position: sticky;
+    top: 92px;
+}
+body {
+    margin: 0px;
+}
+#hero {
+    background: linear-gradient(45deg, #159aff, #0029d0);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    color: white;
+    font-family: system-ui;
+    font-size: 20px;
+    top: 0px;
+    position: sticky;
+}
+</style>
+</head>
+<body>
+    <div id="hero"><h1>Ethio Exit Exam</h1></div>
+    <div id="head_con">
+        <div id="promo_tab"><h1>left for promo</h1></div>
+        <div class="q_list">
+            <div class="q_holder">
+                <h2>what is the most exspensive routeing protocol?</h2>
+                <div class="choice_list">
+                    <div class="choice_latters" id="choice_1_1" onclick="ansawer('1_1_3')" >
+                        <div class="answer">A</div>
+                        <h2>static</h2>
+                    </div>
+                    <div class="choice_latters" id="choice_1_2" onclick="ansawer('1_2_3')">
+                        <div class="answer">B</div>
+                        <h2>deafult</h2>
+                    </div>
+                    <div class="choice_latters" id="choice_1_3" onclick="ansawer('1_3_3')">
+                        <div class="answer">C</div>
+                        <h2>daynamic</h2>
+                    </div>
+                    <div class="choice_latters" id="choice_1_4" onclick="ansawer('1_4_3')">
+                        <div class="answer">D</div>
+                        <h2>none</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="q_holder">
+                <h2>what is a networking device that connect to networks with diffenrt protocol?</h2>
+                <div class="choice_list">
+                    <div class="choice_latters" id="choice_2_1" onclick="ansawer('2_1_2')" >
+                        <div class="answer">A</div>
+                        <h2>router</h2>
+                    </div>
+                    <div class="choice_latters" id="choice_2_2" onclick="ansawer('2_2_2')">
+                        <div class="answer">B</div>
+                        <h2>bridge</h2>
+                    </div>
+                    <div class="choice_latters" id="choice_2_3" onclick="ansawer('2_3_2')">
+                        <div class="answer">C</div>
+                        <h2>hub</h2>
+                    </div>
+                    <div class="choice_latters" id="choice_2_4" onclick="ansawer('2_4_2')">
+                        <div class="answer">D</div>
+                        <h2>switch</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="q_holder">
+                <h2>what is a networking device that connect to networks with diffenrt protocol?</h2>
+                <div class="choice_list">
+                    <div class="choice_latters" id="choice_3_1" onclick="ansawer('3_1_2')" >
+                        <div class="answer">A</div>
+                        <h2>router</h2>
+                    </div>
+                    <div class="choice_latters" id="choice_3_2" onclick="ansawer('3_2_2')">
+                        <div class="answer">B</div>
+                        <h2>bridge</h2>
+                    </div>
+                    <div class="choice_latters" id="choice_3_3" onclick="ansawer('3_3_2')">
+                        <div class="answer">C</div>
+                        <h2>hub</h2>
+                    </div>
+                    <div class="choice_latters" id="choice_3_4" onclick="ansawer('3_4_2')">
+                        <div class="answer">D</div>
+                        <h2>switch</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="promo_tab"><h1>left for promo</h1></div>
+    </div>
+    
+<script>
+function ansawer(latter){
+    
+    var latters = latter.split("_");
+    if(latters[1]==latters[2]){
+        document.getElementById("choice_"+latters[0]+"_"+latters[2]).style.background = '#008000a1';   
+    }else{
+        document.getElementById("choice_"+latters[0]+"_"+latters[1]).style.background = '#ff00007a';
+        document.getElementById("choice_"+latters[0]+"_"+latters[2]).style.background = '#008000a1';
+    }
+    console.log(latters[0]);
+    
+    //
+}
+
+</script>
+</body>
+</html>
